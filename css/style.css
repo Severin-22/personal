@@ -1,0 +1,161 @@
+:root{
+    --main-color: rgb(0, 0, 0);
+    --secondary-color: rgb(26, 26, 26);
+    --font-color: rgb(255, 255, 255);
+    --link-color: #14b770;
+    --gap: 15px;
+}
+
+body, h1, h2, ul, p{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    list-style: none; 
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover, a:focus{
+    opacity: 0.7;
+}
+
+a:active{
+    color: rgb(255, 0, 0); 
+}
+
+html{
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+body, .avatar{
+    margin: 0 auto;
+}
+
+.avatar, header, main, h1, .links, .description{
+    margin-bottom: var(--gap);
+}
+
+.nickname, h1, .description, footer{
+    text-align: center;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    min-height: calc(100vh - var(--gap) * 2);
+    background-color: var(--main-color);
+    padding: var(--gap);
+}
+
+header{
+    position: relative;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.language{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.avatar{
+    --avatar-size: 150px;
+
+    display: block;
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    border: 2px solid var(--link-color);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nickname{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 26px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links img{
+    --link-size: 30px;
+
+    height: var(--link-size);
+    width: var(--link-size);
+}
+
+.large-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    padding-bottom: 1px;
+    border: 2px solid var(--link-color);
+    background-color: var(--font-color);
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 440px) {
+    body{
+        width: 410px;
+        
+    }
+}
+
+@media screen and (min-width: 530px) {
+    body{
+        width: 500px; 
+    }
+
+    .avatar{
+        --avatar-size: 200px;
+
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+    .nickname{
+        font-size: 26px;
+    }
+
+    .links img{
+        --link-size: 50px;
+
+        height: var(--link-size);
+        width: var(--link-size);
+    }
+
+    .large-button{
+        height: 50px;
+        font-size: 20px;
+
+    }
+
+    .text{
+        font-size: 18px;
+    }
+}
